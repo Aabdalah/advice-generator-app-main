@@ -1,0 +1,118 @@
+:root{
+    --Light-Cyan :hsl(193, 38%, 86%);
+    --Neon-Green :hsl(150, 100%, 66%);
+    --Grayish-Blue :hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue :hsl(217, 19%, 24%);
+    --Dark-Blue :hsl(218, 23%, 16%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+}
+body{
+    height: 100vh;
+    background-color: var(--Dark-Blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.card{
+    background-color: var(--Dark-Grayish-Blue);
+    width: 550px;
+    color: white;
+    height: 331px;
+    border-radius: 15px;
+    padding: 45px 45px 65px;
+    position: relative;
+    transition: height 1s ease;
+    -webkit-transition: height 1s ease;
+}
+.card p{
+    color: var(--Neon-Green);
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 3px;
+}
+.card blockquote{
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    color: var(--Light-Cyan);
+    text-align: center;
+    line-height: 38px;
+    position: relative;
+    left:0;
+    opacity: 1;
+    transition: left 0.5s,opacity 0.5s;
+}
+.card .mobile{
+    display: none;
+}
+.card .desktop,.card .mobile{
+   position: relative;
+   left:50%;
+   transform: translate(-50%,0);
+}
+.card .icon{
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    transform: translate(-50%,50%);
+    width:60px;
+    height: 60px;
+    background-color: var(--Neon-Green);
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 0.3s;
+}
+.card .icon:hover{
+    box-shadow: 0 0 30px 10px hsla(150, 100%, 66%, 0.522);
+    cursor: pointer;
+}
+span{
+    opacity: 1;
+    position: relative;
+    top: 0;
+    transition: top 0.5s,opacity 0.5s;
+}
+@media (max-width:575px) {
+    .card{
+        width: 100%;
+        margin: 0 10px;
+        padding: 45px 10px;
+        height: 300px;
+    }
+    .card blockquote{
+        font-size: 22px;
+    }
+    .card .desktop{
+        display: none;
+    }
+    .card .mobile{
+        display: block;
+        width: 80%;
+        min-width: 260px;
+    }
+}
+@media (max-width:490px) {
+    .card{
+        height: 330px;
+    }
+}
+@media (max-width:365px) {
+    .card{
+        height: 370px;
+    }
+}
+@media (max-width:365px) {
+    .card{
+        height: 370px;
+    }
+}
